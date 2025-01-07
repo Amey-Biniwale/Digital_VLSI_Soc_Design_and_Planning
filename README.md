@@ -31,6 +31,7 @@ The EDA tools can perform the following processes.
 ### Simplified RTL2GDS flow
 
 The flow starts with Synthesis moving on to Floorplanning/Powerplanning, Placement, Clock Tree Synthesis, Routing and then ending with Static Timing Analysis.
+
 ![image](https://github.com/user-attachments/assets/4c3cfdbf-770e-4ba0-9313-bc6e6b48fd21)
 
 **Synthesis**
@@ -582,6 +583,7 @@ drc why
 ![Screenshot 2025-01-07 163937](https://github.com/user-attachments/assets/92f6a13d-2213-4a0c-b822-5e497454f519)
 
 **Screenshot of nwell rules**
+
 ![image](https://github.com/user-attachments/assets/91404b7b-4012-4d93-9cc3-3d856c845974)
 
 8) Open the file nwell.mag using ```load nwell``` in the tkcon window
