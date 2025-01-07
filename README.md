@@ -66,6 +66,80 @@ The ASIC flow's main goal is to produce a clean GDSII with no human intervention
 
 The above image is the OpenLANE ASIC Design Flow.
 
+OpenLANE flow is based in OpenROAD Magic VLSI Layout Tool Fault Yosys QFlow and ABC. OpenLANE uses Regression Testing in which it runs OpenLANE on 70-75 designs and compares the results to the best known ones.
+
+It has Design for Test(DFT) which performs the tasks of Scan Insertion, Automatic Test Pattern Generation, Test Patterns Compaction, Fault Coverage, and Fault Simulation.
+
+In Physical Implementation, it does the Placement and Routing of the cells along with floor/powerplanning, Clock Tree Synthesis and much more
+
+Logic Equivalence Check(LEC) is used to formally confirm that the function did not change after modifying the netlist.
+
+In the flow, we also have to deal with antenna rules violation which can be solved using Bridging or adding an antenna diode cell to leak away the charges.
+
+In the last step, we do Timing verification and Physical verification of the chip.
+
+## Get familiar to open-source EDA tools
+
+Getting to know the various commands:
+
+1. pwd: It shows the current directory the user is present.
+2. cd: This command helps the user move from one directory to another.
+3. ls-ltr: It lists all the sub- directories and files that the directory contains.
+4. help: This command helps the user with the information for any command the user wants to gain knowledge about.
+5. clear: This command clears the terminal.
+6. mkdir: This command creates a new directory.
+
+There are few key file like libs.ref which contains information about standard cells, IO cells, etc. and libs.tech which contains all the information regarding the EDA tools.
+
+To get into OpenLANE flow we have to set our directory to
+```
+cd /home/vsduser/Desktop/work/tools/openlane_working_dir/openlane
+```
+To invoke the OpenLANE flow, we have to give the following commands
+```
+docker # this command enters us into the OpenLANE flow
+
+./flow.tcl -interactive
+
+#We need to open the necessary packages
+package require openlane 0.9
+
+#To run any design, we have to prepare it
+prep -design picorv32a
+
+#Now, to run the synthesis, give the command
+run_synthesis
+```
+
+Once you run the synthesis an new file will be created under the runs directory in the picorv32a directory.
+
+Screenshots of running the code:
+![Screenshot 2024-12-29 151121](https://github.com/user-attachments/assets/cfaa0c20-dde0-4743-b53b-745a9cd060d0)
+![Screenshot 2024-12-29 151132](https://github.com/user-attachments/assets/e91ab422-9784-47ab-b053-2a0827ae0f29)
+
+After running the synthesis, we get the following data
+![Screenshot 2024-12-29 152547](https://github.com/user-attachments/assets/b4d6629b-b562-4f9d-bef0-2f374a2cbbe7)
+![Screenshot 2024-12-29 152601](https://github.com/user-attachments/assets/5face9d6-c395-4332-9520-4316e9d8ebd5)
+ Using this we have to find the flop ratio.
+ ```math
+Flop\ Ratio = \frac{1613}{14876} = 0.108429685
+```
+```math
+Percentage\ of\ DFF's = 0.108429685 * 100 = 10.84296854\ \%
+```
+
+Therefore flop ratio will be
+```math
+Flop\ Ratio =\frac{1613}{14876}=0.108429685
+
+Percentage =0.108429685*100 = 10.84296854 %
+```
+
+
+
+
+
+
 
 
 
