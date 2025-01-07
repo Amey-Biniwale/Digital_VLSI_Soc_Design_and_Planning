@@ -143,6 +143,7 @@ For floorplaninng, we will be taking a chip of height H and width W with a die a
 
 **1)**
 We will be starting with a netlist that we intend to implement on this chip. We will convert the symbols present in our netlist into physical dimensions.
+
 ![image](https://github.com/user-attachments/assets/94ad5e7a-82a3-4304-a477-45931d7e25a1)
 
 The standard cells will be 1unit x 1unit making their area 1 sq. unit.
