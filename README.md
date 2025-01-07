@@ -420,6 +420,11 @@ ext2spice
 
 ![Screenshot 2025-01-02 194610](https://github.com/user-attachments/assets/d9e41902-6c84-4d3b-9bd8-b056b3859867)
 
+The modified spice file:
+
+![image](https://github.com/user-attachments/assets/0ce219d2-c06d-420d-ac63-5f1b8c17b9bf)
+
+
 
 **Post Layout ngspice simulation**
 
