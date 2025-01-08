@@ -2,7 +2,7 @@
 # Day 1- Inception of Open Source EDA, Openlane and Sky130 PDK
 ## How to talk to computers
 ### Introduction to QFN-48 package
-The OFN-48 is a Quad flat No-leads 48 pin package. It is a 7mmx7mm package with a height of 0.9mm. 
+The QFN-48 is a Quad flat No-leads 48 pin package. It is a 7mmx7mm package with a height of 0.9mm. 
 ![image](https://github.com/user-attachments/assets/0dd82842-8b4a-43fc-8ed6-fc1868841c14)
 The QFN-48 has PADS, Core, and Die. Pads are mechanism used to send signal through the chip. The signal can be sent from inside to outside and vice versa. The core is a place allocated for the placement of logic gates. The Die is the size of the entire chip.
 
@@ -277,7 +277,7 @@ run_placement
 
 The software will run Global Placement initially followed by Detailed placement
 
-**Screemshots of placement**
+**Screenshots of placement**
 
 ![Screenshot 2024-12-30 155849](https://github.com/user-attachments/assets/e507c680-bd1f-4e74-ab85-47ae9acf77aa)
 
